@@ -16,10 +16,11 @@ namespace B05C10W01
           //Console.WriteLine(  new Program().Add(50));
           //  Get("Full stack web Application Develpment");
 
-            Task.Run(() => {
-                Console.WriteLine(new Program().Add(50));
+          var t=  Task.Run(() => {
+                //Console.WriteLine(new Program().Add(50));
+           return     new Program().Add(50);
             });
-            
+            Console.WriteLine(t.GetAwaiter().GetResult());
             Task.Run(() => {
                 Get("Full stack web Application Develpment");
             });
